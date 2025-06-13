@@ -1,16 +1,24 @@
 #include <stdio.h>
 
+// if else laddar
 int main()
 {
     int tk;
     scanf("%d", &tk);
-    if(tk >= 100)
+    if (tk >= 100)
     {
         printf("Chill & chili te singara khabo 7pcs");
     }
-    else if(tk >=48)
+    else if (tk >= 48)
     {
-        printf("local hotel e singara khabo :D");
+        if (tk == 70)
+        {
+            printf("riksha vara dite hobe :(");
+        }
+        else
+        {
+            printf("local hotel e singara khabo :D");
+        }
     }
     else
     {
