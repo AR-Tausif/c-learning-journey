@@ -5,29 +5,33 @@ int main()
     int a, b, c, d;
     scanf("%d %d %d %d", &a, &b, &c, &d);
 
-    if (d <= 10)
+    if ((a + b * c) == d)
     {
-        long long int sum = a - b + c;
-        if (sum == d)
-        {
-            printf("YES");
-        }
-        else
-        {
-            printf("NO");
-        }
+        printf("YES");
+    }
+    else if ((a + b - c) == d)
+
+    {
+        printf("YES");
+    }
+    else if ((a * b - c) == d)
+    {
+        printf("YES");
+    }
+    else if ((a * b + c) == d)
+    {
+        printf("YES");
+    }
+    else if ((a - b + c) == d)
+    {
+        printf("YES");
+    }
+    else if ((a - b * c) == d)
+    {
+        printf("YES");
     }
     else
     {
-        long long int sum = a + b * c;
-        if (sum == d)
-        {
-            printf("YES");
-        }
-        else
-        {
-            printf("NO");
-        }
+        printf("NO");
     }
-    return 0;
 }
