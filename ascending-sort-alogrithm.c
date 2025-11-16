@@ -23,8 +23,10 @@ int main()
         {
             if(arr[i]>arr[j])
             {
-                int temp =arr[j];
+                int temp =arr[i];
                 printf("%d %dyes\n", arr[i],temp);
+                arr[i]=arr[j];
+                arr[j]=temp;
             }
         }
         // printf("\n");
