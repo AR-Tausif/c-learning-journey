@@ -1,7 +1,10 @@
+2 2yes
 4 4yes
 6 6yes
-5 5yes
-8 8yes
-6 6yes
-8 8yes
-234568
+2 2yes
+4 4yes
+2 2yes
+4 4yes
+2 2yes
+2 2yes
+865432
