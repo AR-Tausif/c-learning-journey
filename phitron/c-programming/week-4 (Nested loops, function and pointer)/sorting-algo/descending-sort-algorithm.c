@@ -25,6 +25,7 @@ int main()
             {
                 int temp =arr[i];
                 printf("%d %dyes\n", arr[i],temp);
+                // swaping the selection indexes    
                 arr[i]=arr[j];
                 arr[j]=temp;
             }
