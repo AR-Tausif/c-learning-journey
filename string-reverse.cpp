@@ -5,12 +5,8 @@ int* p;
  
 int main()
 {
-    string s = "Hello";
+    string s="PAPON ";
+    reverse(s.begin(), s.end());
     cout << s;
-
-    for(char c:s)
-    {
-        cout <<c << endl;
-    }
     return 0;
 }
