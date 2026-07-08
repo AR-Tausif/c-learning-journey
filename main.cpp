@@ -1,0 +1,70 @@
+#include<iostream>
+using namespace std;
+
+class Node{
+    public:
+        int val;
+        Node* next;
+        Node* prev;
+
+    
+    Node(int val)
+    {
+        this->val = val;
+        this->next = NULL;
+        this->prev = NULL;
+    }
+};
+
+void print_forward(Node* head)
+{
+    Node* temp = head;
+    while (temp != NULL)
+    {
+        cout << temp->val << " ";
+        temp = temp->next;
+    }
+    cout << ": Forwarded" << endl;   
+}
+
+void print_backward(Node* tail)
+{
+    Node* temp = tail;
+    while(temp!= NULL)
+    {
+        cout << temp->val << " ";
+        temp = temp->prev;
+    }
+    cout << ": Backwarded";
+}
+
+void insert_new_node(Node* head, Node* new_one)
+{
+    Node* temp = head;
+    new_one->next = head;
+    head->prev = new_one;
+    
+}
+
+int main()
+{
+    Node* head = new Node(10);
+    Node* a = new Node(20);
+    Node* b = new Node(30);
+    Node* tail = new Node(50);
+    // connecting the nodes
+    head->next = a;
+    a->prev = head;
+
+    a->next = b;
+    b->prev = a;
+
+    b->next = tail;
+    tail->prev = b;
+
+    Node* new_one = new Node(100);
+    insert_new_node(head, new_one);
+    print_forward(new_one);
+    print_backward(tail);
+    return 0; 
+}
