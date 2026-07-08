@@ -38,12 +38,22 @@ void print_backward(Node* tail)
     cout << ": Backwarded";
 }
 
-void insert_new_node(Node* head, Node* new_one)
+void insert_new_node(Node* &head, int val)
 {
-    Node* temp = head;
-    new_one->next = head;
-    head->prev = new_one;
+    Node* new_node = new Node(val);
+    new_node->next = head;
+    head->prev = new_node;
+    head = new_node;
     
+}
+
+
+void insert_on_tail(Node* &tail, int val)
+{
+    Node* new_node = new Node(val);
+    tail->next = new_node;
+    new_node->prev = tail;
+    tail = new_node;
 }
 
 int main()
@@ -61,10 +71,12 @@ int main()
 
     b->next = tail;
     tail->prev = b;
-
-    Node* new_one = new Node(100);
-    insert_new_node(head, new_one);
-    print_forward(new_one);
+    // in head
+    insert_on_tail(tail, 660);
+    insert_new_node(head, 1200);
+    insert_new_node(head, 1300);
+    // insert in tail
+    print_forward(head);
     print_backward(tail);
     return 0; 
 }
