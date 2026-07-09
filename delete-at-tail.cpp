@@ -64,22 +64,17 @@ void insert_on_tail(Node* &head, Node* &tail, int val)
     tail = new_node;
 }
 
-void delete_at_head(Node* &head, Node* &tail )
+void delete_at_tail(Node* &head, Node* &tail)
 {
-    if(head == NULL || tail == NULL)
-    {
-        return;
-    }
-    Node* deleted_node = head;
-    head = head->next;
-    delete deleted_node;
-    if(head == NULL)
-    {
-        tail = NULL;
-        return;
-    }
-    head->prev = NULL;
-    
+  Node* deletedNode = tail;
+  tail = tail->prev;
+  delete deletedNode;
+  if(tail == NULL)
+  {
+    head = NULL;
+    return;
+  }
+  tail->next = NULL;
 }
 
 int main()
@@ -98,11 +93,11 @@ int main()
     b->next = tail;
     tail->prev = b;
     // delete at position
-    delete_at_head(head, tail);
-    delete_at_head(head, tail);
-    delete_at_head(head, tail);
-    delete_at_head(head, tail);
-    delete_at_head(head, tail);
+    delete_at_tail(head,tail);
+    delete_at_tail(head,tail);
+    delete_at_tail(head,tail);
+    delete_at_tail(head,tail);
+
 
     print_forward(head);
     print_backward(tail);

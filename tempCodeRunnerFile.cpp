@@ -1,4 +1,5 @@
-== NULL)
+  if(head == NULL)
     {
-        head = new_node;
+        tail = NULL;
+        return;
     }
