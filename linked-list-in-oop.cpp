@@ -101,24 +101,28 @@ class DoublyLinkedList {
             }
             cout << "NULL" << endl;
         }
-};
+        void input()
+        {
+            int val;
+
+            while(true)
+            {
+                cin >> val;
+                // trick: '-1' is a trick for stop the loop
+                if(val == -1)
+                {
+                    break;
+                }
+                push_back(val);
+            }
+        }
+    };
 int main()
 {
     DoublyLinkedList dll;
-    dll.push_front(1);
-    dll.push_front(2);
-    dll.push_front(3);
-
-    dll.push_back(10);
-    dll.push_back(20);
-    dll.push_back(30);
-    dll.push_back(40);
-
-    dll.pop_back();
-
-
-    
-
+    // input formate should be `10 20 30 40 50 -1` (-1 included for stop the loop)
+    dll.input();
+    dll.pop_front();
     dll.print();
     return 0;
 }

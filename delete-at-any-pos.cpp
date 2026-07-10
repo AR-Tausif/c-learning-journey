@@ -105,9 +105,7 @@ int main()
     b->next = tail;
     tail->prev = b;
     // delete at position
-    delete_at_any_pos(head, 2);
-    delete_at_any_pos(head, 1);
-
+    
     
     
     print_forward(head);
