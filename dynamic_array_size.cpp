@@ -1,6 +1,17 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// Process:
+/**
+ * Declare a pointer with a 'new' keyword
+ * taking input with the length of the array with for loop
+ * then print the array
+ * COPY the existing array and increase the size with declaration a new dynamic array
+ * shallow copy those values into the new array
+ * THEN delete the previous/old array with 'delete[]' keyword
+ * print the new array and old/previous array
+ * FINALLY get the output and compare it.
+ */
 
 int main()
 {
@@ -26,7 +37,7 @@ int main()
     {
         cout << b[i] << " ";
     }
-    delete a;
+    delete[] a;
     
     cout << endl;
      // previous array print
